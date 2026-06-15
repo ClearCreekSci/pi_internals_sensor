@@ -41,6 +41,7 @@ THERMAL_ZONE_PATH_SUFFIX          = '/temp'
 class PiInternals(object):
 
     def __init__(self):
+        self.log_callback = None
 
     def logmsg(self,msg):
         if None is not self.log_callback:
