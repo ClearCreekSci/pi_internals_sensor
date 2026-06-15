@@ -78,7 +78,11 @@ class PiInternals(object):
         try:
             output = os.popen('vcgencmd get_throttled').readline().strip()
             tstr = output.replace('throttled=','')
-            rv = int(tstr)
+            # Python doesn't know how to intify '0x0'
+            if '0x0' == tstr:
+                rv = 0
+            else:
+                rv = int(tstr)
         except Exception as ex:
             self.logmsg('Error reading throttled status: ' + str(ex))
         return rv
