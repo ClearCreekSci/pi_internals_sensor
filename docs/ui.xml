@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ccs-ui>
     <types>
+        <struct>
+            <ns>pi_internals</ns>
+            <name>sensor-config</name>
+            <desc>pi_internals-specific configuration</desc>
+        </struct>
 	<struct>
             <ns>pi_internals</ns>
 	    <name>sensor</name>
