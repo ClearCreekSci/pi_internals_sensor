@@ -20,8 +20,8 @@
                 <type>pi_internals:sensor-config</type>
 	    </member>
             <defaults>
-                <period>1</period>
-                <rollover-count>2400</rollover-count>
+                <period>5</period>
+                <rollover-count>480</rollover-count>
             </defaults>
         </struct>
     </types>

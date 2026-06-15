@@ -58,7 +58,7 @@ class PiInternals(object):
             with open(path,'rt') as fd:
                 buf = fd.read().strip()
                 rv = float(buf)/1000.0
-        except Exception ex:
+        except Exception as ex:
             self.logmsg('Error reading CPU temp: ' + str(ex))
         return rv 
 
