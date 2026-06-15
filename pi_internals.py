@@ -53,7 +53,7 @@ class PiInternals(object):
     # Returns CPU temperature in centigrade
     def get_cpu_temperature(self,id=0):
         rv = 0.0
-        path = build_thermal_zone_path(id)
+        path = self.build_thermal_zone_path(id)
         try:
             with open(path,'rt') as fd:
                 buf = fd.read().strip()
@@ -110,7 +110,7 @@ class PiInternals(object):
         gpu = self.get_gpu_temperature()
         gpu = (ccs_base.CCS_GPU_TEMPERATURE_UUID,'{:.{}f}'.format(gpu,2))
         ts = self.get_throttled_status()
-        ts = (ccs_base.CCS_PI_THROTTLED_STATUS,f'{ts:x}')
+        ts = (ccs_base.CCS_PI_THROTTLED_STATUS_UUID,f'{ts:x}')
         return (cpu,gpu,ts)
 
 def load():
