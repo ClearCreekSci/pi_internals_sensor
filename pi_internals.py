@@ -37,6 +37,16 @@ DESCRIPTION                       = 'Raspberry Pi, measured internal values'
 THERMAL_ZONE_PATH_PREFIX          = '/sys/class/thermal/thermal_zone'
 THERMAL_ZONE_PATH_SUFFIX          = '/temp'
 
+# System Throttle Status Flags
+UNDER_VOLTAGE_DETECTED            = 0x1
+ARM_FREQUENCY_CAPPED              = 0x2
+CURRENTLY_THROTTLED               = 0x4
+SOFT_TEMP_LIMIT_ACTIVE            = 0x8
+UNDER_VOLTAGE_HAS_OCCURRED        = 0x10000
+ARM_FREQUENCY_CAP_HAS_OCCURRED    = 0x20000
+THROTTLING_HAS_OCCURRED           = 0x40000
+SOFT_TEMP_LIMIT_HAS_OCCURRED      = 0x80000
+
 
 class PiInternals(object):
 
